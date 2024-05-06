@@ -40,7 +40,9 @@ jobs:
     #   uses: azure/login@v1
     #   with:
     #     creds: ${{ secrets.AZURE_RBAC_CREDENTIALS }} # set up AZURE_RBAC_CREDENTIALS secrets in your repository
-
+    - name: Azure Login
+      uses: Azure/login@v2.1.0
+            
     - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
       uses: actions/setup-dotnet@v3
       with:
